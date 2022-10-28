@@ -81,7 +81,10 @@ public class UserController implements UserDetailsService{
     User updateUser(@PathVariable String userId, @RequestBody User userinfo, @RequestParam("roleId") Optional<String> roleId) {
         User user = userRepository.findById(userId).orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "El usuario no existe"));
         if (userinfo.getUsername() != null) user.setUsername(userinfo.getUsername());
-        if (userinfo.getEmail() != null) user.setEmail(userinfo.getEmail());
+        if(userinfo.getNombres() != null) user.setNombres(userinfo.getNombres());
+        if(userinfo.getApellidos() != null) user.setApellidos(userinfo.getApellidos());
+        if(userinfo.getDocumento() != null) user.setDocumento(userinfo.getDocumento());
+        if(userinfo.getEmail() != null) user.setEmail(userinfo.getEmail());
         if (roleId.isPresent()) {
             Role role = roleRepository.findById(roleId.get())
                     .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Rol no encontrado"));
