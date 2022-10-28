@@ -27,8 +27,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @AllArgsConstructor
 public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFilter{
-
-    private final Authentication authenticationManager;
+    private final AuthenticationManager authenticationManager;
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         String username = request.getParameter("username");
