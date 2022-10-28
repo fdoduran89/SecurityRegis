@@ -1,4 +1,4 @@
 package Registraduria.Security.models;
 
-public class PermissionRol {
+public class PermissionRole {
 }
