@@ -12,14 +12,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@AllArgsConstructor
+/*@AllArgsConstructor
 @RestController
-@RequestMapping("/permisos")
-public class PermissionController {
+@RequestMapping("/permissions")*/
+public class PermissionController {/*
     private final PermissionRepository permissionRepository;
     @PostMapping("")
-    Permission createPermission(@RequestBody Permission infoPermission) {
-        return permissionRepository.save(infoPermission);
+    Permission createPermission(@RequestBody Permission Permission) {
+        return permissionRepository.save(Permission);
     }
 
     @GetMapping("")
@@ -49,5 +49,5 @@ public class PermissionController {
         Map<String, String> data = new HashMap<>();
         data.put("message", "Permiso '" + permission.getUrl() + "' fue eliminado satisfactoriamente");
         return new ResponseEntity<Object>(data, HttpStatus.ACCEPTED);
-    }
+    }*/
 }
