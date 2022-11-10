@@ -1,5 +1,13 @@
 package Registraduria.Security.controllers;
 
+import Registraduria.Security.models.Permission;
+import Registraduria.Security.models.PermissionRole;
+import Registraduria.Security.models.Role;
+import Registraduria.Security.models.User;
+import Registraduria.Security.repositories.PermissionRepository;
+import Registraduria.Security.repositories.PermissionRoleRepository;
+import Registraduria.Security.repositories.RoleRepository;
+import Registraduria.Security.repositories.UserRepository;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
