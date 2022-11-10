@@ -14,4 +14,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
         @DBRef
         private Permission permission;
 
+        public PermissionRole(Role role, Permission permission) {
+            this.role = role;
+            this.permission = permission;
+        }
+
     }

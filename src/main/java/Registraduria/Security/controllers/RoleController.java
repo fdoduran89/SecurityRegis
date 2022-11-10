@@ -23,8 +23,7 @@ public class RoleController {
     private final RoleRepository roleRepository;
 
     @PostMapping("")
-    Role createrole(@RequestBody Role role){
-
+    Role createrole(@RequestBody Role role) {
         return roleRepository.save(role);
     }
 

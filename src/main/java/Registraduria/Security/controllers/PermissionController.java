@@ -18,8 +18,8 @@ import java.util.Map;
 public class PermissionController {
     private final PermissionRepository permissionRepository;
     @PostMapping("")
-    Permission createPermission(@RequestBody Permission Permission) {
-        return permissionRepository.save(Permission);
+    Permission createPermission(@RequestBody Permission infoPermission) {
+        return permissionRepository.save(infoPermission);
     }
 
     @GetMapping("")
