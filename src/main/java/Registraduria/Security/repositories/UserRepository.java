@@ -10,8 +10,8 @@ import java.util.Optional;
 public interface UserRepository extends MongoRepository<User,String> {
     Optional<User> findUserByDocumento(String documento);
 
-    @Query("{'nick': {'$regex': ?0, '$options': 'i' }}")
-    List<User> findByRegexpUsername(String nick);
+    @Query("{'username': {'$regex': ?0, '$options': 'i' }}")
+    List<User> findByRegexpUsername(String username);
 
     User findByUsername(String username);
 }
