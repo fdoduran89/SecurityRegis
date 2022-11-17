@@ -33,6 +33,7 @@ public class User {
             String email,
             Role role
     ){
+        this.id =id;
         this.username = username;
         this.nombres = nombres;
         this.apellidos = apellidos;
