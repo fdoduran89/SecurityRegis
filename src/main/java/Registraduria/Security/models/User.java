@@ -34,6 +34,7 @@ public class User {
             Role role
     ){
         this.id = id;
+        this.id =id;
         this.username = username;
         this.nombres = nombres;
         this.apellidos = apellidos;
