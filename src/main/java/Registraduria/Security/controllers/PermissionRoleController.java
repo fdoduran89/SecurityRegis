@@ -109,6 +109,7 @@ public class PermissionRoleController {
         }
         boolean exist = this.checkIfAlreadyExists(role, permission);
         if (exist) {
+             { System.out.println("Ya existe"); }
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         } else {
             PermissionRole permissionRole = new PermissionRole(role, permission);
